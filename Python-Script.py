@@ -8,7 +8,6 @@ from csv import writer
 #Importing webpage content
 html_text = requests.get('https://www.aeaweb.org/journals/aer/issues').text
 soup = BeautifulSoup(html_text, 'html.parser')
-print(soup)
 #Begin----Extracting webpage information
 #Volume Number, Issue Page Links and Issue Dates
 volumes = soup.find_all('section', class_='journal-issues-expandable')
